@@ -1,0 +1,13 @@
+name: first-workflow
+on: [push]
+
+jobs:
+  run-shell-commands:
+    runs-on: ubuntu-latest
+    steps:
+      - name: run echo command
+        run: echo "hellp world"
+      - name: check the npm and node version
+        run: |
+          node -v
+          npm -v
