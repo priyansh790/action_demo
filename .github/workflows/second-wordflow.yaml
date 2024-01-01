@@ -1,0 +1,14 @@
+name: second workflow
+on: [push]
+
+jobs:
+  checking-default-dir:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checking the current path and variable
+        run: |
+          pwd
+          ls -a
+          echo $GITHUB_WORKSPACE
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
