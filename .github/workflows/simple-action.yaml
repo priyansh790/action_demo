@@ -1,0 +1,14 @@
+name: simple js action
+on: [push]
+
+jobs:
+  simple-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: simple js action
+        id: print-to-log
+        uses: actions/hello-world-javascript-action@main
+        with:
+          who-to-greet: priyansh
+      - name: log output
+        run: echo "${{ steps.print-to-log.outputs.time }}"
