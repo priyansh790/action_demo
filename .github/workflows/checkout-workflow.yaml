@@ -10,4 +10,4 @@ jobs:
           echo $GITHUB_SHA
           echo $GITHUB_REF
       - name: echo
-        run: echo "merge conflict"
+        run: echo " conflicts"
