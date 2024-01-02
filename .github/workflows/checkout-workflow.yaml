@@ -9,3 +9,5 @@ jobs:
         run: |
           echo $GITHUB_SHA
           echo $GITHUB_REF
+      - name: echo
+        run: echo " conflicts"
