@@ -2,17 +2,10 @@ name: checkout workflow
 on: [push, pull_request]
 
 jobs:
-  checkout-list-files:
+  check-sha-ref:
     runs-on: ubuntu-latest
     steps:
-      - name: list before checkout
-        run: ls -a
-      - name: checkout
+      - name: check current branch
         run: |
-          git init
-          git remote add origin "https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git"
-          git fetch origin
-          git checkout main
-
-      - name: list after checkout
-        run: ls -a
+          echo $GITHUB_SHA
+          echo $GITHUB_REF
