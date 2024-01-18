@@ -1,0 +1,12 @@
+name: docker-workflow
+on: [push]
+
+jobs:
+  job1:
+    name: docker job
+    runs-on: ubuntu-latest
+    steps:
+      - name: first-step
+        uses: docker://node:18.16-alpine3.17
+        with:
+          entrypoint: node -v
